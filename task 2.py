@@ -1,7 +1,7 @@
 students = {}
 
 try:
-    with open("students.txt", "r", encoding="utf-8") as file:
+    with open("resource/students.txt", "r", encoding="utf-8") as file:
         for line in file:
             try:
                 name, grades = line.strip().split(":")

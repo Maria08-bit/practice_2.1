@@ -3,7 +3,7 @@ import csv
 products = []
 
 try:
-    with open("products.csv", "r", encoding="utf-8") as file:
+    with open("resource/products.csv", "r", encoding="utf-8") as file:
         reader = csv.reader(file)
         for row in reader:
             if row and any(row):
@@ -81,7 +81,7 @@ if error_count > 0:
 
 print("\nСохранение ")
 try:
-    with open("products.csv", "w", newline="", encoding="utf-8") as file:
+    with open("resource/products.csv", "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerows(products)
     print("Данные успешно сохранены в файл products.csv")
