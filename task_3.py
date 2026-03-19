@@ -3,8 +3,8 @@ import os
 
 products = []
 
-if os.path.exists("products.csv"):
-    with open("products.csv", "r", encoding="utf-8") as file:
+if os.path.exists("resource/products.csv"):
+    with open("resource/products.csv", "r", encoding="utf-8") as file:
         reader = csv.reader(file)
         for row in reader:
             if len(row) == 3:
@@ -65,6 +65,6 @@ for p in products:
 print("Общая стоимость:", total)
 
 
-with open("products.csv", "w", newline="", encoding="utf-8") as file:
+with open("resource/products.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerows(products)
